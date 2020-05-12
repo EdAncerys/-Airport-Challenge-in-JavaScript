@@ -30,3 +30,26 @@ As an air traffic controller
 To ensure safety 
 I want to prevent landing when weather is stormy 
 ```
+
+
+12 specs, 0 failures
+
+* Feature Test:
+    * under normal conditions
+        * planes can be instructed to land at an airport
+        * planes can be instructed to take off
+    * under stormy conditions
+        * prevent take off if weather is stormy
+        * prevent landing when the weather is stormy
+* Plane
+    * can land at an airport
+    * can instruct to take off from airport
+* Airport
+    * has no planes by default
+    * can clear palnes for landing
+    * can clear planes for take off
+    * can check for stormy condition
+    * under stormy conditions
+        * does not clear planes to take off
+        * prevents plane from landing
+        

@@ -9,16 +9,18 @@ describe('Feature Test:', function(){
     airport = new Airport();
   });
 
-  it('planes can be instructed to land at an airport', function(){
-    plane.land(airport);
-    expect(airport.planes()).toContain(plane);
-  });
-
-  it('planes can be instructed to take off', function() {
+  describe('under normal conditions', function() {
+    it('planes can be instructed to land at an airport', function(){
       plane.land(airport);
-      plane.takeOff();
-      expect(airport.planes()).not.toContain(plane)
-  }); 
+      expect(airport.planes()).toContain(plane);
+    });
+  
+    it('planes can be instructed to take off', function() {
+        plane.land(airport);
+        plane.takeOff();
+        expect(airport.planes()).not.toContain(plane)
+    }); 
+  });
 
   describe('under stormy conditions', function() {
     it('prevent take off if weather is stormy', function() {
@@ -35,12 +37,6 @@ describe('Feature Test:', function(){
         expect(airport.planes()).toEqual([])
     });
   });
-
-  describe('under not stromy conditions', function() {
-
-  });
-  
-
 
 
 });
