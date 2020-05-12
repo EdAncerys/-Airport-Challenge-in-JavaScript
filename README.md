@@ -1,8 +1,28 @@
+Airport Challenge
+=================
+
+```
+        ______
+        _\____\___
+=  = ==(____MA____)
+          \_____\___________________,-~~~~~~~`-.._
+          /     o o o o o o o o o o o o o o o o  |\_
+          `~-.__       __..----..__                  )
+                `---~~\___________/------------`````
+                =  ===(_________)
+
+```  
+
 ## Translate the Airport Challenge into JavaScript.
 
 ### Task
 
 We have a request from a client to write the software to control the flow of planes at an airport. The planes can land and take off provided that the weather is sunny. Occasionally it may be stormy, in which case no planes can land or take off. Here are the user stories that we worked out in collaboration with the client:
+
+### Learning Objectives covered
+
+Use Jasmine to Test-Drive Development
+Understand and use Jasmine spies
 
 ### User Stories
 ```
@@ -31,6 +51,7 @@ To ensure safety
 I want to prevent landing when weather is stormy 
 ```
 
+### Test spec documentation with Jasmine 
 
 12 specs, 0 failures
 
@@ -52,4 +73,3 @@ I want to prevent landing when weather is stormy
     * under stormy conditions
         * does not clear planes to take off
         * prevents plane from landing
-        
