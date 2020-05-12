@@ -8,7 +8,11 @@ class Airport {
     };
 
     clearForLanding(plane) {
-        this._hangar.push(plane);
+        if(this.isStormy()) {
+          throw new Error('can not land during the stormy weather')
+        } else {
+          this._hangar.push(plane);
+        }
     };
 
     clearForTakeOff(plane) {

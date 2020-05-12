@@ -33,6 +33,11 @@ describe('Airport', function() {
             spyOn(airport, 'isStormy').and.returnValue(true);
             expect(function(){ airport.clearForTakeOff(plane); }).toThrowError('can not take off during the storm')
         });
+
+        it('prevents plane from landing', function() {
+            spyOn(airport, 'isStormy').and.returnValue(true);
+            expect(function() { airport.clearForLanding(plane) }).toThrowError('can not land during the stormy weather')
+        });
     });
 
 });
